@@ -18,7 +18,9 @@ RED='\033[0;31m'
 RES='\033[0m'
 
 #helper functions---
-
+info()    { echo -e "${CYAN}[INFO]${RESET} $1"; }
+success() { echo -e "${GREEN}[OK]${RESET} $1"; }
+error()   { echo -e "${RED}[ERROR]${RESET} $1"; exit 1; }
 
 echo "" #it reprent the blank line
 echo "=========================================="
@@ -27,7 +29,7 @@ echo "=========================================="
 echo ""
 
 #step-1 make sure the script is running as root---
-info "step-1: checking root permissions..."
+info "Step-1: checking root permissions..."
 if ["$EUID" -ne 0 ]; then
     error "please run with sudo: sudo bash server_setup.sh"
 fi
