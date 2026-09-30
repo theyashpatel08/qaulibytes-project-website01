@@ -50,7 +50,7 @@ if [ -d "$app-dir/.git"]; then
     git pull origin main
 else
     #first time - clone the full repo
-    git clone "$git_repo" "$app_dir"
+    git clone "$github_repo" "$app_dir"
     cd "app_dir"
 fi
 success "latest code feteched from github."

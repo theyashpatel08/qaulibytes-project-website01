@@ -30,7 +30,7 @@ echo ""
 
 #step-1 make sure the script is running as root---
 info "Step-1: checking root permissions..."
-if ["$EUID" -ne 0 ]; then
+if [ "$EUID" -ne 0 ]; then
     error "please run with sudo: sudo bash server_setup.sh"
 fi
 success "running as a root."
