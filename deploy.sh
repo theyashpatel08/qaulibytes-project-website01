@@ -25,7 +25,7 @@ error() { echo -e "${RED}{ERROR}${RESET} $1"; exit 1; }
 #read the github repo url from the first argument ($1)--
 github_repo="$1"
 
-if [ -z "github-repo" ]; then
+if [ -z "github_repo" ]; then
     error "github repo url missing. usage: bash deploy.sh <github_repo_url>"
 fi
 
@@ -44,20 +44,20 @@ echo ""
 
 #step-1: get the latest code from github--
 info "step 1: getting latest code from github..."
-if [ -d "$app-dir/.git"]; then
+if [ -d "$app_dir/.git" ]; then
     #repo already exits on server - just pull the latest changes
     cd "$app_dir"
     git pull origin main
 else
     #first time - clone the full repo
     git clone "$github_repo" "$app_dir"
-    cd "app_dir"
+    cd "$app_dir"
 fi
 success "latest code feteched from github."
 
 #step-2: install node.js dependencies---
 info "step 2: installing npm packages..."
-cd "app_dir"
+cd "$app_dir"
 npm install --silent
 success "npm packages installed."
 
