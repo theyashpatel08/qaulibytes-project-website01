@@ -54,7 +54,7 @@ success "node.js $(node --version) and npm $(npm --version) installed."
 
 #step-5: install nginx web server---
 info "step 5: installing nginx..."
-apt instll nginx -y > /dev/null 2>&1
+apt install nginx -y > /dev/null 2>&1
 success "nginx installed."
 
 #step-6: create the web root directory for our app---
