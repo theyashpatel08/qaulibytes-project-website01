@@ -48,8 +48,8 @@ success "curl installed."
 
 #step-4: install node.js v20 LTS--
 info "step 4: installing node.js v20..."
-curl -fsSL https://deb.nodesource.com/setup_20.x | bash - > /dev/null 2>&1
-apt install -y node.js > /dev/null 2>&1
+curl -fsSL https://deb.nodesource.com/setup_20.x | bash - # > /dev/null 2>&1
+apt install -y node.js # > /dev/null 2>&1
 success "node.js $(node --version) and npm $(npm --version) installed."
 
 #step-5: install nginx web server---
