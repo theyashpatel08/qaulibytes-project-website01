@@ -79,7 +79,7 @@ server {
     }
 }
 EOF
-Success "nginx config file created."
+success "nginx config file created."
 
 #step-8: enable the site by creating a symlink--
 info "step 8: enabling the site..."
