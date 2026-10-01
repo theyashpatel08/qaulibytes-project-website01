@@ -75,11 +75,11 @@ server {
     
     #send all routes to index.html (required for react router)
     location / {
-        try_files $uri/ /index.html;
+        try_files $uri $uri/ /index.html;
     }
 }
 EOF
-Success "nginx config files created."
+Success "nginx config file created."
 
 #step-8: enable the site by creating a symlink--
 info "step 8: enabling the site..."
